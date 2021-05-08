@@ -22,8 +22,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["you@yoursite.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            mail.setToRecipients(["you@yoursite.com"]) /// write the mail you want here
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true) /// write your message here
 
             present(mail, animated: true)
         } else {
